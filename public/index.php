@@ -1,3 +1,7 @@
+<?php
+include('../source/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
   <head>
@@ -17,5 +21,20 @@
         <li class="listItem">Info</li>
       </ul>
     </nav>
+    <article class="sdg-container">
+<section class="sdg-section">
+        <?php
+            $sql = "SELECT * FROM SDG";
+$result = $conn->query($sql);
+
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  include('../source/views/sdg.php');
+
+}
+?>
+</section>
+  </article>
   </body>
 </html>

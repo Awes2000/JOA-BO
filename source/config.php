@@ -1,25 +1,14 @@
 <?php
-
-/*
- * Database configuration
- */
-
-// Define envSettings als array
-$envSettings = [];
-
-// Checkt of de .env file bestaat
-if (file_exists(dirname(__FILE__) . '/.env')) {
-
-    // Parse de ini file, en sla alles op in $envSettings
-    $envSettings = parse_ini_file(dirname(__FILE__) . '/.env');
-} else {
-    die("ERROR: no .env file found");
-}
-
-define("DB_NAME", $envSettings["DB_NAME"]);
-define("DB_USERNAME", $envSettings["DB_USER"]);
-define("DB_PASSWORD", $envSettings["DB_PASSWORD"]);
-define("DB_HOST", $envSettings["DB_HOST"]);
+$servername = "mariadb";
+$username = "USER_JOA";
+$password = "PASS_JOA";
+$dbname = "BO-JOA";
 
 // Create connection
-define("CONN", new mysqli("db2", DB_USERNAME, DB_PASSWORD, "voorbeeld_db"));
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+
