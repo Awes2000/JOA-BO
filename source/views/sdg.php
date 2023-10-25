@@ -1,6 +1,4 @@
 
-    <div class="sdg-card">
-        <p><?= $row['title'] ?></p>
-        <H2><?= $row['image'] ?></H2>
+    <div class="sdg-card" style="background-color: <?= $row['color'] ?>">
         <img src="/images/SDG/<?= $row['image'] ?>" alt="<?= $row['title'] ?>">
     </div>
