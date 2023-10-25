@@ -1,4 +1,9 @@
 <?php
+/* 
+ * This is part of the JOA BO project
+ * Copyright (C) 2023 JOA Technologies
+ * See the LICENSE file for copying conditions.
+ */
 
 // Load configuration
 require_once('../source/config.php');
@@ -6,7 +11,7 @@ require_once('../source/dummy.php');
 
 // Check connection
 if ($GLOBALS["conn"]->connect_error) {
-  die("Connection failed: " . $GLOBALS["conn"]->connect_error);
+    die("Connection failed: " . $GLOBALS["conn"]->connect_error);
 }
 
 // Used for debugging
@@ -48,6 +53,7 @@ try {
     $music = $GLOBALS["conn"]->query("SELECT * FROM music");
 }
 
+/* WIP
 function login($username, $password) {
     try {
         $prep = $GLOBALS["conn"]->prepare("SELECT * FROM users WHERE username LIKE ? AND password LIKE ? LIMIT 1");
@@ -79,3 +85,4 @@ function login($username, $password) {
 }
 
 login("root", "~=61}:Pp5,:<!GW9WIQ%");
+*/
