@@ -21,10 +21,11 @@ include('../source/config.php');
         <li class="listItem">Info</li>
       </ul>
     </nav>
-    <article class="sdg-container">
+    <article class="sdg-article">
 <section class="sdg-section">
+  <div class="sdg-cards">
         <?php
-            $sql = "SELECT * FROM SDG";
+            $sql = "SELECT * FROM SDG LIMIT 3";
 $result = $conn->query($sql);
 
   // output data of each row
@@ -34,6 +35,7 @@ $result = $conn->query($sql);
 
 }
 ?>
+</div>
 </section>
   </article>
   </body>
