@@ -28,23 +28,25 @@
               <li class="listItem">Info</li>
           </ul>
         </nav>
-        <article class="sdg-article">
-    <section class="sdg-section">
-        <ul class="sdg-card-list">
-            <?php
-                $result = $conn->query("SELECT * FROM SDG LIMIT 3");
-                while($row = $result->fetch_assoc()) {
-                    include('../source/views/sdg.php');
-                }
-            ?>
-        </ul>
-    </section>
-    <div class="arrow left">
-        <i class="fas fa-caret-left"></i>
-    </div>
-    <div class="arrow right">
-        <i class="fas fa-caret-right"></i>
-    </div>
-</article>
+            <article class="sdg-article">
+        <section class="sdg-section">
+            <ul class="sdg-card-list">
+                
+                <?php
+                    $result = $conn->query("SELECT * FROM SDG LIMIT 3");
+                    while($row = $result->fetch_assoc()) {
+                        include('../source/views/sdg.php');
+                    }
+                ?>
+            </ul>
+            <h2>Leer Over Onze Projecten</h2>
+        </section>
+        <div class="arrow left">
+            <i class="fas fa-caret-left"></i>
+        </div>
+        <div class="arrow right">
+            <i class="fas fa-caret-right"></i>
+        </div>
+    </article>
     </body>
 </html>
