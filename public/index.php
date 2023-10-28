@@ -13,13 +13,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>JOA B.O SDG</title>
         <link rel="stylesheet" href="css/style.css" />
         <script src="js/main.js" defer></script>
+        <script src="https://kit.fontawesome.com/40dd9b944f.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav class="nav">
-          <img src="images/joa_logo.png" alt="JOA Logo" class="logo" />
+          <img src="images/joa-logo-test.webp" alt="JOA Logo" class="logo" />
           <ul class="list">
               <li class="listItem">Home</li>
               <li class="listItem">SDG'S</li>
@@ -28,18 +29,22 @@
           </ul>
         </nav>
         <article class="sdg-article">
-            <section class="sdg-section">
-                <div class="sdg-cards">
-                    <?php
-                        $result = $conn->query("SELECT * FROM SDG LIMIT 3");
-                        // output data of each row
-                        while($row = $result->fetch_assoc()) {
-                            //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-                            include('../source/views/sdg.php');
-                        }
-                    ?>
-                </div>
-            </section>
-        </article>
+    <section class="sdg-section">
+        <ul class="sdg-card-list">
+            <?php
+                $result = $conn->query("SELECT * FROM SDG LIMIT 3");
+                while($row = $result->fetch_assoc()) {
+                    include('../source/views/sdg.php');
+                }
+            ?>
+        </ul>
+    </section>
+    <div class="arrow left">
+        <i class="fas fa-caret-left"></i>
+    </div>
+    <div class="arrow right">
+        <i class="fas fa-caret-right"></i>
+    </div>
+</article>
     </body>
 </html>

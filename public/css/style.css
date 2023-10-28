@@ -19,7 +19,7 @@ html {
 
 body {
     font-size: 2rem;
-    background: grey;
+    background: #eee
 }
 
 .nav {
@@ -31,8 +31,7 @@ body {
     align-items: center;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
-    border-bottom: solid #eee 0.15rem;
-    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 96, 231, 0.3);
+
     /* Add a shadow */
 }
 
@@ -44,15 +43,47 @@ body {
     display: flex;
     justify-content: space-around;
     list-style: none;
+    gap: 2rem;
 }
 
 .listItem {
-    font-size: 4rem;
-    padding: 0 10rem;
+    background-color: white;
+    width: 250px;
+    text-align: center;
+    border-radius: 15px;
+    padding: .5em 0;
+    font-size: 1.25em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #278fd1;
 }
 
 .listItem:hover {
     cursor: pointer;
+}
+
+.sdg-card-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.sdg-card {
+    flex: 0 1 calc(33.33% - 1rem);
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px;
+    cursor: pointer;
+}
+
+.sdg-card img {
+    max-width: 100%;
+    height: auto;
 }
 
 .sdg-article {
@@ -64,22 +95,31 @@ body {
 }
 
 .sdg-section {
-    flex-direction: column;
-}
-
-.sdg-card {
     display: flex;
-    gap: 1rem;
-    /* Adjust the gap as needed */
-}
-
-.sdg-card > img {
-    width: 20rem;
-    height: 20rem;
-}
-
-.sdg-cards {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    /* Distribute the cards with space in between */
+    width: 80%;
+}
+
+.arrow {
+    font-size: 15rem;
+    cursor: pointer;
+    color: #9CCC65;
+    position: absolute;
+    top: 50%;
+}
+
+.arrow.left {
+    left: 5rem;
+    /* Adjust the left arrow position as needed */
+}
+
+.arrow.right {
+    right: 5rem;
+    /* Adjust the right arrow position as needed */
+}
+
+.arrow:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
 }
