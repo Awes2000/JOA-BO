@@ -33,7 +33,7 @@
             <ul class="sdg-card-list">
                 
                 <?php
-                    $result = $conn->query("SELECT * FROM SDG LIMIT 3");
+                    $result = $conn->query("SELECT * FROM SDG");
                     while($row = $result->fetch_assoc()) {
                         include('../source/views/sdg.php');
                     }
