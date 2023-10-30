@@ -44,13 +44,14 @@ body {
     justify-content: space-around;
     list-style: none;
     gap: 2rem;
-    color: black;
+    color: blue;
     overflow: hidden;
     position: relative;
+
 }
 
 .listItem {
-    background-color: #eee;
+    background-color: #479d2c;
     width: 250px;
     text-align: center;
     border-radius: 15px;
@@ -58,28 +59,13 @@ body {
     font-size: 1.25em;
     cursor: pointer;
     font-weight: 700;
-    color: #fafafa;
+    color: white;
     position: relative;
-    animation: animate 4s ease-in-out infinite;
-    overflow: hidden;
-    text-shadow: 0 0 5px bl;
-    border: 1.5px solid white;
+    border: 0 0 1px black;
     /* Add white text shadow to the text */
 }
 
-.listItem::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #9ad3f9;
-    /* Set the background color of the waves to blue */
-    border-radius: 15px;
-    animation: animate 4s ease-in-out infinite;
-    z-index: -1;
-}
+
 
 .listItem:hover {
     cursor: pointer;
@@ -159,62 +145,4 @@ body {
 .arrow:hover {
     background-color: #f0f0f0;
     border-radius: 50%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes animate {
-
-    0%,
-    100% {
-        clip-path: polygon(0% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                16% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                33% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                50% 5%,
-                /* Adjust the Y-coordinate here to control the wave's peak position */
-                67% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                84% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                100% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                100% 100%,
-                0% 100%);
-    }
-
-    50% {
-        clip-path: polygon(0% 15%,
-                /* Adjust the Y-coordinate here to control the wave's peak position */
-                16% 15%,
-                /* Adjust the Y-coordinate here to control the wave's peak position */
-                33% 15%,
-                /* Adjust the Y-coordinate here to control the wave's peak position */
-                50% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                67% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                84% 10%,
-                /* Adjust the Y-coordinate here to control the wave's start position */
-                100% 15%,
-                /* Adjust the Y-coordinate here to control the wave's peak position */
-                100% 100%,
-                0% 100%);
-    }
 }
