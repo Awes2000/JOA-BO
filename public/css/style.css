@@ -19,7 +19,7 @@ html {
 
 body {
     font-size: 2rem;
-    background: #eee
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav {
@@ -48,10 +48,11 @@ body {
     overflow: hidden;
     position: relative;
 
+
 }
 
 .listItem {
-    background-color: #479d2c;
+    background-color: #6bb353;
     width: 250px;
     text-align: center;
     border-radius: 15px;
@@ -61,7 +62,8 @@ body {
     font-weight: 700;
     color: white;
     position: relative;
-    border: 0 0 1px black;
+    transition: background-color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 2px;
     /* Add white text shadow to the text */
 }
 
@@ -69,6 +71,8 @@ body {
 
 .listItem:hover {
     cursor: pointer;
+    background-color: #479d2c;
+
 }
 
 .sdg-card-list {
@@ -145,4 +149,36 @@ body {
 .arrow:hover {
     background-color: #f0f0f0;
     border-radius: 50%;
+}
+
+.section_games_cta {
+    border: 1px solid black;
+    max-width: 85%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section_games_cta video {
+    /* Ensures the video scales to fit the container */
+}
+
+.cta-button {
+    bottom: 1rem;
+    background-color: #3498db;
+    color: red;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
 }
