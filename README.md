@@ -2,14 +2,15 @@
 Beroepsopdracht 2e klas 1e periode.
 
 # Setup
-1. Start de Docker Daemon:
+1. Kopieer `.env_example` en noem het `.env`
+2. Edit `.env`, en vul hier je configuratie in (check HeidiSQL!)
+3. Start de Docker Daemon:
     * Linux: `dockerd` in je terminal
     * Windows: start `Docker Desktop`
-    * Mac: ???
 
-2. Run `docker-compose up`
+4. Run `docker-compose --env-file .env up`
 
-3. Bezoek de site via je browser:
+5. Bezoek de site via je browser:
     * http://127.0.0.1:8080 (http://localhost:8080 werkt ook)
 
 # Moodboard
