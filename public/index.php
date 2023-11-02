@@ -48,18 +48,18 @@
             <i class="fas fa-caret-right"></i>
         </div>
     </article>
-    <section class="section_games_cta">
+<section class="section_games_cta">
     <div class="video-container">
         <video autoplay muted loop poster="images/posterpic.webp">
             <source src="images/sdgvideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
-    <a href="https://www.external-website.com" class="cta-link">
-        <button class="cta-button">Visit External Website</button>
+<a href="https://www.external-website.com" class="cta--link">
+        <button class="cta-button">Start jouw SDG avontuur!</button>
     </a>
 </section>
-
+<section class="sdg-informatiepage"></section>
 
     </body>
 </html>
