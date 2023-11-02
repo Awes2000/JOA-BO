@@ -5,7 +5,8 @@
   -->
 
 <?php
-    include_once('../source/config.php');
+    include_once("../source/config.php");
+    include_once("../source/data.php");
 ?>
 
 <!DOCTYPE html>
@@ -28,38 +29,39 @@
               <li class="listItem">Info</li>
           </ul>
         </nav>
-            <article class="sdg-article">
-        <section class="sdg-section">
-            <ul class="sdg-card-list">
-                
-                <?php
-                    $result = $conn->query("SELECT * FROM SDG");
-                    while($row = $result->fetch_assoc()) {
-                        include('../source/views/sdg.php');
-                    }
-                ?>
-            </ul>
-            <h2>Leer Over Onze Projecten</h2>
+        <article class="sdg-article">
+            <section class="sdg-section">
+                <ul class="sdg-card-list">
+                    <?php
+
+                        $rows = get_sdgs();
+                        foreach($rows as $row) {
+                            include('../source/views/sdg.php');
+                        }
+                    ?>
+                </ul>
+                <h2>Leer Over Onze Projecten</h2>
+            </section>
+
+            <!-- Removed until carousel system has been added
+            <div class="arrow left">
+                <i class="fas fa-caret-left"></i>
+            </div>
+            <div class="arrow right">
+                <i class="fas fa-caret-right"></i>
+            </div>
+            -->
+        </article>
+        <section class="section_games_cta">
+            <div class="video-container">
+                <video autoplay muted loop poster="images/posterpic.webp">
+                    <source src="images/sdgvideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a href="https://www.external-website.com" class="cta-link" rel="noreferrer">
+                <button class="cta-button">Visit External Website</button>
+            </a>
         </section>
-        <div class="arrow left">
-            <i class="fas fa-caret-left"></i>
-        </div>
-        <div class="arrow right">
-            <i class="fas fa-caret-right"></i>
-        </div>
-    </article>
-    <section class="section_games_cta">
-    <div class="video-container">
-        <video autoplay muted loop poster="images/posterpic.webp">
-            <source src="images/sdgvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <a href="https://www.external-website.com" class="cta-link">
-        <button class="cta-button">Visit External Website</button>
-    </a>
-</section>
-
-
     </body>
 </html>

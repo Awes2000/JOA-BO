@@ -47,8 +47,6 @@ body {
     color: blue;
     overflow: hidden;
     position: relative;
-
-
 }
 
 .listItem {
@@ -66,8 +64,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.20) 0px 2px;
     /* Add white text shadow to the text */
 }
-
-
 
 .listItem:hover {
     cursor: pointer;
@@ -128,6 +124,13 @@ body {
     text-align: center;
 }
 
+.sdg-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .arrow {
     font-size: 15rem;
     cursor: pointer;
@@ -181,4 +184,12 @@ body {
     cursor: pointer;
     width: 5rem;
     height: 5rem;
+}
+
+/* 
+ * Hide everything SDG related, we'll display them with JS eventually 
+ * MUST be the last attribute that gets set, so it doesn't get overwritten!
+ */
+.sdg-card, .sdg-modal {
+    display: none;
 }
