@@ -20,6 +20,7 @@ html {
 body {
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
+
 }
 
 .nav {
@@ -154,7 +155,7 @@ body {
 .section_games_cta {
     border: 1px solid black;
     max-width: 85%;
-    height: 30rem;
+    height: 45rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,18 +168,31 @@ body {
 }
 
 .section_games_cta video {
-    /* Ensures the video scales to fit the container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cta-button {
-    bottom: 1rem;
-    background-color: #3498db;
-    color: red;
-    padding: 1rem 2rem;
+    background-color: #278fd1;
+    color: white;
     border: none;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     text-decoration: none;
     cursor: pointer;
-    width: 5rem;
-    height: 5rem;
+    width: 15rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: center;
+    font-weight: 900;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px;
+}
+
+.cta-button:hover {
+    color: #F5F5F5
 }
