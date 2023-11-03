@@ -20,38 +20,18 @@
         <script src="https://kit.fontawesome.com/40dd9b944f.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="nav">
-          <img src="images/joa-logo-test.webp" alt="JOA Logo" class="logo" />
-          <ul class="list">
-              <li class="listItem">Home</li>
-              <li class="listItem">SDG'S</li>
-              <li class="listItem">Minigame</li>
-              <li class="listItem">Info</li>
-          </ul>
-        </nav>
-        <article class="sdg-article">
-            <section class="sdg-section">
-                <ul class="sdg-card-list">
-                    <?php
-
-                        $rows = get_sdgs();
-                        foreach($rows as $row) {
-                            include('../source/views/sdg.php');
-                        }
-                    ?>
-                </ul>
-                <h2>Leer Over Onze Projecten</h2>
-            </section>
-
-            <!-- Removed until carousel system has been added
-            <div class="arrow left">
-                <i class="fas fa-caret-left"></i>
-            </div>
-            <div class="arrow right">
-                <i class="fas fa-caret-right"></i>
-            </div>
-            -->
-        </article>
+        <?php
+            include("../source/views/navbar.php");
+        ?>
+        <section class="welkom-sdg">
+            <h1>Welkom bij de SDG!</h1>
+            <h2>Ontdek de Duurzame Ontwikkelingsdoelen</h2>
+            <h3>Waar gaan de SDG's over?</h3>
+        <p>
+            De Duurzame Ontwikkelingsdoelen, of SDG's, zijn een reeks wereldwijde doelen die zijn vastgesteld door de Verenigde Naties om tegen 2030 een betere en duurzamere toekomst voor iedereen te bereiken. Ze richten zich op belangrijke kwesties zoals armoedebestrijding, onderwijs, gendergelijkheid, klimaatactie en nog veel meer. De SDG's zijn een gezamenlijke inspanning om een positieve impact te hebben op de wereld.
+        </p>
+        </section>
+        <hr>
         <section class="section_games_cta">
             <div class="video-container">
                 <video autoplay muted loop poster="images/posterpic.webp">
@@ -59,32 +39,9 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <a href="https://www.external-website.com" class="cta-link" rel="noreferrer">
-                <button class="cta-button">Visit External Website</button>
+            <a href="https://www.external-website.com" class="cta--link" rel="noreferrer">
+                <button class="cta-button">Start jouw SDG avontuur</button>
             </a>
         </section>
-<<<<<<< HEAD
-        <div class="arrow left">
-            <i class="fas fa-caret-left"></i>
-        </div>
-        <div class="arrow right">
-            <i class="fas fa-caret-right"></i>
-        </div>
-    </article>
-<section class="section_games_cta">
-    <div class="video-container">
-        <video autoplay muted loop poster="images/posterpic.webp">
-            <source src="images/sdgvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-<a href="https://www.external-website.com" class="cta--link">
-        <button class="cta-button">Start jouw SDG avontuur!</button>
-    </a>
-</section>
-<section class="sdg-informatiepage"></section>
-
-=======
->>>>>>> 08d419c8775b11ac5e3c62d8f42aa491bd6199ea
     </body>
 </html>

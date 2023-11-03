@@ -20,7 +20,7 @@ try{
         die("Connection failed: " . $conn->connect_error);
     }
 } catch (Exception $ex) {
-    echo "Database failed";
+    echo serialize($ex);
     $conn = NULL;
 }
 
