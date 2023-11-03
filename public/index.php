@@ -43,5 +43,49 @@
                 <button class="cta-button">Start jouw SDG avontuur</button>
             </a>
         </section>
+        <section class="over" id="sdg-info">
+    <header id="over">
+        <h2>Over onze inzet voor de SDG's</h2>
+    </header>
+    <div>
+        <div>
+            <p>
+                Wij streven ernaar om bij te dragen aan de Duurzame Ontwikkelingsdoelen (SDG's) door middel van educatieve en duurzame initiatieven. Ontdek onze toewijding aan een betere wereld en hoe jij kunt bijdragen!
+            </p>
+            <p>
+                Ga met ons mee op een reis om de uitdagingen en kansen van de SDG's te begrijpen. Ontdek hoe je kunt bijdragen aan een duurzamere toekomst voor iedereen.
+            </p>
+            <p>
+                Laat je inspireren door de magie van positieve verandering en de impact die we samen kunnen maken. Ontdek de kracht van collectieve actie en leer hoe je betrokken kunt raken bij onze inspanningen voor de SDG's.
+            </p>
+            <p>
+                Samen onthullen we de geheimen van een betere toekomst en creëren we mogelijkheden voor iedereen om deel te nemen aan deze wereldwijde inspanning voor vooruitgang.
+            </p>
+        </div>
+        <figure>
+            <img src="images/sdg-inzet.webp" alt="SDG's" />
+        </figure>
+    </div>
+</section>
+<footer class="footer">
+    <ul class="footer-content">
+      <li>
+        <a href="https://github.com/Awes2000" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+    <ul class="contact-info">
+      <li>School: MediaCollege Amsterdam.</li>
+      <li>Module: Leerjaar 2 Periode 1.</li>
+    </ul>
+    <p>&copy; Awes Zoretic & Oscar Slot NVVN Beroepsopdracht. All rights reserved.</p>
+  </footer>
+
     </body>
 </html>
