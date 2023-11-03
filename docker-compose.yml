@@ -4,7 +4,12 @@ version: "3.5"
 services:
   # PHP FPM Service
   php:
-    container_name: php4 # fix for containers already being in use (even tho no containers are running)
+    environment:
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - DB_HOST=${DB_HOST}
     build:
       dockerfile: ./docker/php/dockerfile
       context: .
@@ -15,7 +20,6 @@ services:
 
   # Nginx Service
   nginx:
-    container_name: web4 # see line 8
     image: nginx:latest
     ports:
       - 8080:80
@@ -36,7 +40,7 @@ services:
       MYSQL_PASSWORD: PASS_JOA
       MYSQL_ROOT_PASSWORD: PASS_JOA
     ports:
-      - 3309:3306
+      - 3307:3306
     volumes:
       - "./docker/mysqldata:/var/lib/mysql"
 
