@@ -4,5 +4,5 @@
     </button>
     
     <h2 class="sdg-modal-title"><?=$row["title"]?></h2>
-    <p class="sdg-modal-description"><?=$row["beschrijving"]?></p>
+    <p class="sdg-modal-description"><?=$row["extra_beschrijving"]?></p>
 </div>
