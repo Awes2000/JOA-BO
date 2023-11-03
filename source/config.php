@@ -6,14 +6,22 @@
  * See the LICENSE file for copying conditions.
  */
 
-$servername = "mariadb";
-$username = "USER_JOA";
-$password = "PASS_JOA";
-$dbname = "BO-JOA";
+try{
+    // Create connection
+    $conn = new mysqli(
+        $_ENV["DB_HOST"],
+        $_ENV["DB_USER"], 
+        $_ENV["DB_PASSWORD"], 
+        $_ENV["DB_NAME"]
+    );
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+} catch (Exception $ex) {
+    echo "Database failed";
+    $conn = NULL;
 }
+
+define("MYSQL", $conn);
