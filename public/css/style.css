@@ -38,7 +38,7 @@ body {
 }
 
 .logo {
-    max-height: 16rem;
+    max-height: 12rem;
     max-width: 60rem;
     border: 1px solid black;
     background-color: #eee;
@@ -80,10 +80,13 @@ body {
 .listItem:hover {
     cursor: pointer;
     background-color: #479d2c;
+    filter: brightness(1.2);
 
 }
 
 .welkom-sdg {
+    border-top-right-radius: 4%;
+    border-top-left-radius: 4%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,9 +95,8 @@ body {
     gap: 1rem;
     padding: 5rem;
     margin-right: 2rem;
-    font-weight: 400;
+    font-weight: 550;
     background: linear-gradient(45deg, #60befd, #347edb);
-    border-radius: 1%;
     margin-top: 5rem;
     margin-bottom: 5rem;
     color: #eee;
@@ -127,7 +129,15 @@ hr {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 4px;
     cursor: pointer;
+    transition: transform 0.2s;
 
+}
+
+.sdg-card:hover {
+    transform: scale(1.1);
+    padding: 2rem;
+    border: 1px solid black;
+    filter: brightness(1.2);
 }
 
 .sdg-card img {
@@ -146,7 +156,6 @@ hr {
 .sdg-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
 
@@ -154,8 +163,8 @@ hr {
 
 .sdg-section h2 {
     font-size: 5rem;
+    color: white;
     /* Pas de grootte aan zoals gewenst */
-    color: #072541;
     /* Pas de tekstkleur aan naar je voorkeur */
     margin-top: 1rem;
     /* Voeg bovenmarge toe om de afstand te regelen */
@@ -235,12 +244,292 @@ hr {
 }
 
 .cta-button:hover {
-    color: #F5F5F5
+    color: #F5F5F5;
+    filter: brightness(1.2);
 }
 
 a {
     text-decoration: none;
     color: whites;
+}
+
+.over {
+    padding: 4rem;
+    height: 80rem;
+    border-bottom: 0.5rem solid #278fd1;
+}
+
+.over>header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.over>header>h2 {
+    color: #278fd1;
+    font-size: 350%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.over>div {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    height: 100%;
+}
+
+.over>div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.over>div>div>p {
+    width: 55ch;
+    color: #278fd1;
+    font-weight: 500;
+}
+
+.over>div>figure>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.over>div>figure {
+    position: relative;
+    width: 50rem;
+    height: 40rem;
+}
+
+
+.over>div>figure::after {
+    content: "";
+    background: linear-gradient(to bottom right, rgba(0, 153, 204, 0.8), rgba(51, 204, 51, 0.5));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+}
+
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+
+.footer-content li {
+    margin-right: 1rem;
+}
+
+.footer-content img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 0.5rem;
+}
+
+.sdg-modal {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    text-align: center;
+    margin-top: 5rem;
+
+}
+
+.sdg-modal-title {
+    font-size: 2rem;
+    /* Adjust the size as needed */
+    margin: 1rem 0;
+    /* Add spacing as needed */
+    flex: 1;
+    /* Grow to fill available space */
+}
+
+.sdg-modal-description {
+    font-size: 3rem;
+    /* Adjust the size as needed */
+    margin: 1rem 0;
+    /* Add spacing as needed */
+    width: 55ch;
+    /* Limit width */
+    flex: 1;
+    color: white;
+    /* Grow to fill available space */
+}
+
+.sdg-modal-backbutton {
+    font-size: 5rem;
+    /* Adjust the size as needed for a big button */
+    padding: 1rem 3rem;
+    /* Adjust the padding as needed */
+    /* Add spacing as needed */
+    background-color: #3498db;
+    /* Button background color */
+    color: #fff;
+    /* Text color */
+    border: none;
+    border-radius: 1rem;
+    /* Rounded corners */
+    cursor: pointer;
+}
+
+.sdg-image-container {
+    width: 45rem;
+    height: 25rem;
+    border-radius: 5%;
+}
+
+.sdg--modal--image {
+    width: 100%;
+    height: 100%;
+}
+
+.sdg-modal-backbutton:hover {
+    background-color: #278fd1;
+    filter: brightness(1.2);
+    /* Change color on hover */
+}
+
+/* Existing CSS rules */
+
+/* Media query for screens with a maximum width of 37.5rem (600px) */
+@media screen and (max-width: 37.5rem) {
+    .list {
+        margin-right: 3.5rem;
+        width: 100%;
+        padding-right: 1.5rem;
+        padding-left: 0.5rem;
+        /* Adjust the styles for the navigation as needed */
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .listItem {
+        width: 100%;
+        font-size: 2.5rem;
+        padding-right: 0rem;
+        margin-right: 0.5rem;
+        box-shadow: none;
+
+        /* Make list items full width */
+    }
+
+    .logo {
+        display: none;
+        max-width: 14%;
+        /* Adjust the logo size as needed */
+        margin: 0 auto;
+
+        /* Center the logo horizontally */
+    }
+
+    .welkom-sdg {
+        padding: 1.5rem;
+        margin-right: 0;
+        flex-direction: column;
+    }
+
+    .hr {
+        width: 100%;
+    }
+
+    .sdg-section {
+
+        width: 100%;
+        height: 50rem;
+
+    }
+
+    .sdg-card-list {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .sdg-card {
+        max-width: 60%;
+        flex-direction: column;
+        /* Adjust card styles for the vertical layout */
+    }
+
+    .over {
+        flex-direction: column;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 1rem;
+
+    }
+
+    .over h2 {
+        font-size: 1rem;
+    }
+
+    .sdg-article {
+        align-items: baseline;
+    }
+
+    .sdg-card-list {
+        align-items: center;
+        padding: 3rem;
+        width: 120%;
+        margin-right: 3rem;
+    }
+
+
+
+    .sdg-modal {
+        flex-direction: column;
+        font-size: 0.5rem;
+        width: 40ch;
+    }
+
+    .sdg-modal-title h2 {
+        padding: 1rem;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .sdg-modal-description {
+        font-size: 1.5rem;
+        color: white;
+        padding: 1rem;
+    }
+
+    .sdg-modal-backbutton {}
+
+    .sdg-image-container {
+        /* Adjust the styles for the image container */
+    }
+
+    .sdg--modal--image {
+        padding: 1rem;
+        margin: 2rem;
+        /* Adjust the styles for the modal image */
+    }
 }
 
 /* 
