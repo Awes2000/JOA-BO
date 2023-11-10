@@ -4,7 +4,7 @@
   -- See the LICENSE file for copying conditions.
   -->
 
-<?php
+  <?php
     include_once("../source/config.php");
     include_once("../source/data.php");
 ?>
@@ -16,7 +16,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>JOA B.O SDG</title>
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/sdg.css">
         <script src="js/main.js" defer></script>
         <script src="https://kit.fontawesome.com/40dd9b944f.js" crossorigin="anonymous"></script>
     </head>
@@ -24,13 +23,12 @@
         <?php
             include("../source/views/navbar.php");
         ?>
-
+        
         <article class="sdg-article">
             <section class="sdg-section">
                 <ul class="sdg-card-list">
                     <?php
-                        $rows = get_sdgs();
-                        foreach($rows as $row) {
+                        foreach(get_sdgs() as $sdg) {
                             include('../source/views/sdg.php');
                         } 
                     ?>
