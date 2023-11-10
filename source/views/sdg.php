@@ -1,5 +1,5 @@
-    <li class="sdg-card" id="sdg<?=$row['ID']?>" style="background-color: <?= $row['color'] ?>">
-        <img src="/images/SDG/<?= $row['image'] ?>" alt="<?= $row['title'] ?>">
+    <li class="sdg-card" id="sdg<?=$sdg[0]?>" style="background-color: <?=$sdg[4]?>">
+        <img src="/images/SDG/<?=$sdg[3]?>" alt="<?=$sdg[1]?>">
     </li>
 
     <?php
